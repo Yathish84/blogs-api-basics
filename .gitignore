@@ -1,3 +1,5 @@
 blog-venv
 __pycache__
 
+blog/core/config.py
+

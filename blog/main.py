@@ -8,9 +8,9 @@ from sqlalchemy.orm import Session
 
 blog_model.Base.metadata.create_all(bind=engine)
 app = FastAPI()
-
+ 
 db_dependency = Annotated[Session,Depends(get_db)]
-
+ 
 @app.get("/blogs")
 async def get_all_blogs(db:db_dependency):
     return db.query(Blog_Model).all()
